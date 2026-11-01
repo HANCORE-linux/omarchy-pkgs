@@ -1,13 +1,13 @@
 # Maintainer: Ryan Hughes <ryan@omarchy.org>
 pkgname='omarchy-settings-dev'
-pkgver=4.0.0.r7537.g5a4f136
+pkgver=4.0.0.r7538.gbbfdfdd
 pkgrel=1
 # Pinned by the upstream watch in .omarchy/package.json (bin/sync-upstream):
 # every quattro tip becomes a commit pin here, so the package is versioned,
 # checksummed and built exactly like a release, just more often. The r-number
 # is the branch's total commit count, not the distance from the last tag: the
 # published history used the total, and pacman must never see it go down.
-_commit=5a4f13664c834c65d588fc9d062688ce8e8a10bf
+_commit=bbfdfddb2065028a583d2815ddc6d3d47b00ae38
 pkgdesc='Omarchy user defaults, /etc/skel content, fonts, plymouth theme, and support helpers (quattro branch tip)'
 # Arch-specific because the shipped /etc tree is not the same on every
 # architecture for older sources: their zram and oomd drop-ins belong to the
@@ -127,7 +127,7 @@ _etc_override_paths=(
 # build from a local source tree instead (mirrors omarchy-zsh/omarchy-fish DX);
 # the arrays are emptied below so nothing is downloaded in that case.
 source=("omarchy::git+https://github.com/omacom/omarchy.git#commit=${_commit}")
-sha256sums=('763780a6518518eb71633466d6cdbde2f7eb86064824107943aa95b7144daa1a')
+sha256sums=('0e73aa5b611501ef70bbf91e42d9d965f38baf0c0ff26357026f3c2255a27e6b')
 if [[ -n "${OMARCHY_SRC:-}" ]]; then
   source=()
   sha256sums=()
